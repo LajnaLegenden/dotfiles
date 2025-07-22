@@ -1,7 +1,19 @@
 packages:
   arch:
+    paru:
+      - fnm
     pacman:
       - exa
       - bat
       - zoxide
       - fzf
+      - unzip
+      - code
+      - file-roller
+      - gnome-clocks 
+      - gnome-disk-utility
+      - gnome-font-viewer
+      - gnome-keyring
+      - gnome-text-editor 
+      - nautilus
+
