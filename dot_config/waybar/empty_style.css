@@ -1,3 +1,105 @@
 * {
-    color:red;
+    border: none;
+    font-family: "FiraCode Nerd Font", "Font Awesome 6 Free";
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#workspaces {
+    background-color: #282c34;
+    padding-left: 4px;
+    padding-top: 1px;
+}
+
+#workspaces button {
+    background-color: transparent;
+    color: #5c6370;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: #3e4451;
+    color: #abb2bf;
+}
+
+#workspaces button.active {
+    background-color: #61afef;
+    color: #282c34;
+}
+
+#workspaces button.urgent {
+    background-color: #e06c75;
+    color: #282c34;
+}
+
+#window {
+    background-color: #282c34;
+    color: #abb2bf;
+}
+
+#tray,
+#clock,
+#cpu,
+#memory,
+#battery,
+#network,
+#pulseaudio {
+    background-color: #282c34;
+    color: #abb2bf;
+}
+
+#tray {
+}
+
+#cpu {
+    color: #d19a66;
+}
+
+#memory {
+    color: #98c379;
+}
+
+#battery {
+    color: #e5c07b;
+}
+
+#battery.warning {
+    color: #d19a66;
+}
+
+#battery.critical {
+    color: #e06c75;
+}
+
+#network {
+    color: #61afef;
+}
+
+#pulseaudio {
+    color: #c678dd;
+}
+
+#pulseaudio.muted {
+    color: #5c6370;
+}
+
+#clock {
+    color: #abb2bf;
+    font-weight: bold;
+}
+
+tooltip {
+    background-color: #282c34;
+    border: 1px solid #3e4451;
+    color: #abb2bf;
+}
+
+tooltip label {
+    color: #abb2bf;
 }
