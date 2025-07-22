@@ -16,4 +16,6 @@ packages:
       - gnome-keyring
       - gnome-text-editor 
       - nautilus
+      - seahorse
+      - btop
 
