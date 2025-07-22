@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.os "linux" -}}
+#!/bin/bash
+set -e
+
+if command -v pacman >/dev/null 2>&1; then
+  sudo pacman -S --noconfirm --needed{{ range .packages.arch.pacman }} {{ . }}{{ end }}
+fi
+{{ end -}}
+

@@ -1,0 +1,77 @@
+# P10k instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Zinit setup
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+if [ ! -d "$ZINIT_HOME" ]; then
+  mkdir -p "$(dirname $ZINIT_HOME)"
+  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Essential immediate-load plugins
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+
+# Deferred plugins
+zinit ice wait lucid
+zinit light zsh-users/zsh-syntax-highlighting
+
+zinit ice wait lucid
+zinit light zsh-users/zsh-completions
+
+zinit ice wait'0a' lucid
+zinit light zsh-users/zsh-autosuggestions
+
+zinit ice wait lucid
+zinit light Aloxaf/fzf-tab
+
+# Deferred snippets
+zinit ice wait lucid
+zinit snippet OMZL::history.zsh
+
+for snippet in git sudo; do
+  zinit ice wait lucid
+  zinit snippet OMZP::$snippet
+done
+
+# Load p10k config
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval "$(zoxide init zsh)"
+source <(fzf --zsh)
+ 
+# Basic keybindings
+bindkey -e
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+bindkey '^[w' kill-region
+
+# Deferred completion styling
+zinit ice wait lucid
+zinit light %HOME/.config/zsh/completion-config
+
+
+
+# ========== Aliases ==========
+alias ..="cd .."
+alias ...="cd ../.."
+alias ls="eza"
+alias grep="rg"
+alias ps="procs"
+alias yui="yarn upgrade-interactive --latest && yarn-dedupe && yarn"
+alias cd="z"
+alias cat="bat"
+alias rebuildSystem="sudo nixos-rebuild switch --flake /home/lajna/nixConfig/"
+alias gcam="git commit --amend --no-edit"
+alias gitClean="git pull -p && git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs -r git branch -D && git branch | wc -l"
+alias :q="echo 'ARE YOU STOOOPID, THIS IS NOT A FILE'"
+alias :wq="echo 'ARE YOU STOOOPID, THIS IS NOT A FILE, WHAT ARE YOU SAVING?'"
+alias grm="git fetch origin && git rebase origin/master"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+
+autoload -Uz compinit && compinit   # Zsh built-in completion
