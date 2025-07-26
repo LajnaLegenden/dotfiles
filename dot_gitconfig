@@ -1,3 +1,5 @@
 [user]
 	name = Linus Jansson
 	email = 34426335+LajnaLegenden@users.noreply.github.com.
+[core]
+	excludesfile = /home/lajna/.gitignore_global

@@ -39,7 +39,7 @@
 
   # Prompt colors.
   local grey='242'
-  local red='#FF5C57'
+  local red='#FF5ffC57'
   local yellow='#F3F99D'
   local blue='#57C7FF'
   local magenta='#FF6AC1'

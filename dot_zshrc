@@ -53,8 +53,6 @@ bindkey '^[w' kill-region
 zinit ice wait lucid
 zinit light %HOME/.config/zsh/completion-config
 
-
-
 # ========== Aliases ==========
 alias ..="cd .."
 alias ...="cd ../.."
@@ -64,7 +62,6 @@ alias ps="procs"
 alias yui="yarn upgrade-interactive --latest && yarn-dedupe && yarn"
 alias cd="z"
 alias cat="bat"
-alias rebuildSystem="sudo nixos-rebuild switch --flake /home/lajna/nixConfig/"
 alias gcam="git commit --amend --no-edit"
 alias gitClean="git pull -p && git branch -vv | grep ': gone]' | awk '{print \$1}' | xargs -r git branch -D && git branch | wc -l"
 alias :q="echo 'ARE YOU STOOOPID, THIS IS NOT A FILE'"
@@ -73,5 +70,13 @@ alias grm="git fetch origin && git rebase origin/master"
 alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
+alias cm="chezmoi"
+
+if [ -f ~/.secrets ]; then
+  . ~/.secrets
+fi
+
+export EDITOR=nvim
+
 
 autoload -Uz compinit && compinit   # Zsh built-in completion

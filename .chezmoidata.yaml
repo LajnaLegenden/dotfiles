@@ -2,6 +2,7 @@ packages:
   arch:
     paru:
       - fnm
+      - vscode-langservers-extracted
     pacman:
       - exa
       - bat
@@ -18,4 +19,26 @@ packages:
       - nautilus
       - seahorse
       - btop
-
+      - smbclient
+      - gvfs-smb
+      - tailscale
+      - tmux
+      - fd
+      - ttf-dejavu
+      - ttf-liberation
+      - ttf-droid
+      - ttf-ubuntu-font-family
+      - noto-fonts
+      - docker
+      - docker-compose
+      - jq
+      - fastfetch
+      - wl-clipboard
+      - xdg-desktop-portal-gtk
+      - darkman
+      - pavucontrol
+      - less
+      - nvtop
+      - gvfs
+      - swaync
+      - tldr
