@@ -32,16 +32,16 @@ set_keymap(
 )
 
 -- Search/Find references
-set_keymap_with_word(
-	"n",
-	"<leader>d",
-	':lua require"config.custom".search_with_word()<CR>',
-	"find-it-faster.findReferences"
-)
-
-set_keymap_with_word(
-	"n",
-	"<leader>s",
-	':lua require"config.custom".grep_search_with_word()<CR>',
-	"find-it-faster.findWithinFiles"
-)
+-- set_keymap_with_word(
+-- 	"n",
+-- 	"<leader>d",
+-- 	':lua require"config.custom".search_with_word()<CR>',
+-- 	"find-it-faster.findReferences"
+-- )
+-- 
+-- set_keymap_with_word(
+-- 	"n",
+-- 	"<leader>s",
+-- 	':lua require"config.custom".grep_search_with_word()<CR>',
+-- 	"find-it-faster.findWithinFiles"
+-- )
