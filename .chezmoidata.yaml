@@ -3,6 +3,7 @@ packages:
     paru:
       - fnm
       - vscode-langservers-extracted
+      - brave-bin
     pacman:
       - exa
       - bat
@@ -42,3 +43,13 @@ packages:
       - gvfs
       - swaync
       - tldr
+      - neovim
+      - git
+      - zsh
+      - nwg-displays
+      - nwg-look
+      - firefox
+      - waybar
+      - gnome-keyring
+      - ttf-firacode-nerd
+      - ttf-droid
