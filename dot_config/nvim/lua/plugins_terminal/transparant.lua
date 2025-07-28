@@ -1,4 +1,5 @@
 return {
   'xiyaowong/transparent.nvim',
-  opts = {}
+  opts = {},
+  lazy = false
 }
