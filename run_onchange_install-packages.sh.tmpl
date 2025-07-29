@@ -5,5 +5,8 @@ set -e
 if command -v pacman >/dev/null 2>&1; then
   sudo pacman -S --noconfirm --needed{{ range .packages.arch.pacman }} {{ . }}{{ end }}
 fi
+if command -v paru >/dev/null 2>&1; then
+  paru -S --noconfirm --needed{{ range .packages.arch.paru }} {{ . }}{{ end }}
+fi
 {{ end -}}
 
