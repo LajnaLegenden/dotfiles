@@ -4,6 +4,7 @@ packages:
       - fnm
       - vscode-langservers-extracted
       - brave-bin
+      - mvppaper
     pacman:
       - exa
       - bat
