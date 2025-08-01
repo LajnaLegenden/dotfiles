@@ -1,14 +1,26 @@
 encryption = "age"
 [age]
-    identity ="~/.config/age/keys.txt"
     recipient = "age15qakh7caj6tdmg2tup4ppu8pe748tfl6eggfz4u7nx2ps46dpynqlnr3wz"
 
 [merge]
-command = "bash"
-args = [
+  command = "bash"
+  args = [
     "-c",
-    "cp {{ printf "%q" "{{ .Target }}" }} {{ printf "%q" "{{ .Target }}" }}.base && code --new-window --wait --merge {{ printf "%q" "{{ .Destination }}" }} {{ printf "%q" "{{ .Target }}" }}  {{ printf "%q" "{{ .Target }}" }}.base {{ printf "%q" "{{ .Source }}" }},",
-]
+    # This multiline string constructs the final command.
+    # We define $lb and $rb to hold the brace characters, "escaping" them
+    # from the parent template engine.
+    '''
+    {{- $lb := "{{" -}}
+    {{- $rb := "}}" -}}
+    cp {{ $lb }} .Target | printf "%q" {{ $rb }} {{ $lb }} .Target | printf "%q" {{ $rb }}.base && \
+    code --new-window --wait --merge \
+      {{ $lb }} .Destination | printf "%q" {{ $rb }} \
+      {{ $lb }} .Target | printf "%q" {{ $rb }} \
+      {{ $lb }} .Target | printf "%q" {{ $rb }}.base \
+      {{ $lb }} .Source | printf "%q" {{ $rb }}
+    ''',
+  ]
+
 
 [git]
     autoCommit = true
