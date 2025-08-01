@@ -1,0 +1,15 @@
+encryption = "age"
+[age]
+    identity ="~/.config/age/keys.txt"
+    recipient = "age15qakh7caj6tdmg2tup4ppu8pe748tfl6eggfz4u7nx2ps46dpynqlnr3wz"
+
+[merge]
+command = "bash"
+args = [
+    "-c",
+    "cp {{ printf "%q" "{{ .Target }}" }} {{ printf "%q" "{{ .Target }}" }}.base && code --new-window --wait --merge {{ printf "%q" "{{ .Destination }}" }} {{ printf "%q" "{{ .Target }}" }}  {{ printf "%q" "{{ .Target }}" }}.base {{ printf "%q" "{{ .Source }}" }},",
+]
+
+[git]
+    autoCommit = true
+    autoPush = true
