@@ -64,6 +64,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias v="nvim"
 alias cm="chezmoi"
+alias ts="/home/lajna/.local/bin/tmux-sessionizer"
 alias git-https='git remote set-url origin https://github.com/$(git remote get-url origin | sed "s/https:\/\/github.com\///" | sed "s/git@github.com://")'
 alias git-ssh='git remote set-url origin git@github.com:$(git remote get-url origin | sed "s/https:\/\/github.com\///" | sed "s/git@github.com://")'
 
