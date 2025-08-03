@@ -17,25 +17,12 @@ setopt append_history    # Append to the history file instead of overwriting it
 setopt share_history     # Share history between all sessions
 setopt inc_append_history  # Incrementally save history after each command
 
-# Essential immediate-load plugins
-zinit ice depth=1
 zinit light romkatv/powerlevel10k
-
 # Deferred plugins
-zinit ice wait lucid
 zinit light zsh-users/zsh-syntax-highlighting
-
-zinit ice wait lucid
 zinit light zsh-users/zsh-completions
-
-zinit ice wait'0a' lucid
 zinit light zsh-users/zsh-autosuggestions
-
-zinit ice wait lucid
 zinit light Aloxaf/fzf-tab
-
-# Deferred snippets
-zinit ice wait lucid
 zinit snippet OMZL::history.zsh
 
 for snippet in git sudo; do
