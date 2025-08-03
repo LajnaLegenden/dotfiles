@@ -24,7 +24,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    background-color: #3e4451;
+    background-color: #e06c75;
     color: #abb2bf;
 }
 
@@ -96,7 +96,7 @@ window#waybar {
 
 tooltip {
     background-color: #282c34;
-    border: 1px solid #3e4451;
+    border: 1px solid #e06c75;
     color: #abb2bf;
 }
 
