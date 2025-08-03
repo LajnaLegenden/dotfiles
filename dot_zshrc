@@ -10,6 +10,12 @@ if [ ! -d "$ZINIT_HOME" ]; then
   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 source "${ZINIT_HOME}/zinit.zsh"
+HISTSIZE=10000           # Max history size
+SAVEHIST=10000           # Number of history entries to save
+HISTFILE=~/.zsh_history  # History file location
+setopt append_history    # Append to the history file instead of overwriting it
+setopt share_history     # Share history between all sessions
+setopt inc_append_history  # Incrementally save history after each command
 
 # Essential immediate-load plugins
 zinit ice depth=1
