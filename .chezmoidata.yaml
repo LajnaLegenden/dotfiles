@@ -5,6 +5,9 @@ packages:
       - vscode-langservers-extracted
       - brave-bin
       - mpvpaper
+      - googledot-cursor-theme
+      - whitesur-gtk-theme
+      - apple-fonts
     pacman:
       - exa
       - bat
