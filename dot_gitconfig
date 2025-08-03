@@ -1,5 +1,12 @@
 [user]
 	name = Linus Jansson
 	email = 34426335+LajnaLegenden@users.noreply.github.com.
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJbwdA32WMtlhQjfQV2a+DEU5xzWSQ0kNP37dTQZTB0n
 [core]
 	excludesfile = /home/lajna/.gitignore_global
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
