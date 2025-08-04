@@ -171,7 +171,7 @@ if [[ "{}" == \[TMUX\]* ]]; then
 else
   # Remove single quotes from the path
   dir=$(echo "{}" | sed "s/^'\''//; s/'\''\$//");
-  if [[ -d "$dir/.git" ]]; then
+  if [[ -e "$dir/.git" ]]; then
     branch=$(git -C "$dir" branch --show-current 2>/dev/null);
     echo "Branch: $branch";
     changes=$(git -C "$dir" status --porcelain | wc -l);
