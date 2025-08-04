@@ -57,3 +57,4 @@ packages:
       - gnome-keyring
       - ttf-firacode-nerd
       - ttf-droid
+      - git-delta
