@@ -58,3 +58,4 @@ packages:
       - ttf-firacode-nerd
       - ttf-droid
       - git-delta
+      - github-cli
