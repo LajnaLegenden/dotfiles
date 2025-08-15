@@ -76,3 +76,10 @@ export EDITOR=nvim
 
 
 autoload -Uz compinit && compinit   # Zsh built-in completion
+
+# bun completions
+[ -s "/home/lajna/.bun/_bun" ] && source "/home/lajna/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
