@@ -3,14 +3,12 @@ require("config.keys")
 
 -- LSP Setup
 require("config.lsp")
+require("config.conform")
 
 -- Enable LSP servers (they will automatically use the global LspAttach autocmd)
 vim.lsp.enable('luals')
 vim.lsp.enable('vtsls')
-vim.lsp.enable('eslint')
-vim.lsp.enable('biome')
 vim.lsp.enable('gopls')
-vim.lsp.enable('nixd')
 
 -- Show line numbers
 vim.opt.number = true

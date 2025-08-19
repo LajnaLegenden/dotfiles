@@ -63,17 +63,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 			buf_set_keymap("n", "<leader>ca", vim.lsp.buf.code_action, "editor.action.quickFix", { desc = "Code Actions" }, bufnr)
 		end
 		
-		-- Format document (check if server supports formatting)
-		if client.server_capabilities.documentFormattingProvider then
-			buf_set_keymap("n", "<leader>lf", function() 
-				vim.lsp.buf.format({ async = true }) 
-			end, "editor.action.formatDocument", { desc = "LSP Format Document" }, bufnr)
-		elseif client.server_capabilities.documentRangeFormattingProvider then
-			buf_set_keymap("v", "<leader>lf", function() 
-				vim.lsp.buf.format({ async = true }) 
-			end, "editor.action.formatSelection", { desc = "LSP Format Selection" }, bufnr)
-		end
-		
 		-- Diagnostics (these are always available)
 		buf_set_keymap("n", "<leader>e", vim.diagnostic.open_float, "editor.action.showDiagnostics", { desc = "Show Line Diagnostics" }, bufnr)
 		buf_set_keymap("n", "[d", vim.diagnostic.goto_prev, "editor.action.marker.prev", { desc = "Previous Diagnostic" }, bufnr)
