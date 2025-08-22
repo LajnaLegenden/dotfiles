@@ -7,7 +7,7 @@ require("config.conform")
 
 -- Enable LSP servers (they will automatically use the global LspAttach autocmd)
 vim.lsp.enable('luals')
-vim.lsp.enable('vtsls')
+vim.lsp.enable('tsgo')
 vim.lsp.enable('gopls')
 
 -- Show line numbers
