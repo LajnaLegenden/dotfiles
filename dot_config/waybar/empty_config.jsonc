@@ -13,6 +13,7 @@
         "format": "{icon}",
         "format-icons": {
             "1": "",
+            "4": "", // music
             "9": ""
         },
         "persistent_workspaces": {
